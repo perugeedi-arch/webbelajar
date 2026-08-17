@@ -1,0 +1,256 @@
+/* ===== VARIABEL TEMA ORIENTAL MODERN ===== */
+:root {
+    --bg-primary: #F7F5F0;
+    --bg-surface: #FFFFFF;
+    --china-red: #A8201A;
+    --china-gold: #C5A059;
+    --china-gold-light: #FFFDF7;
+    --text-main: #222222;
+    --text-muted: #666666;
+    --border-color: #E2DDD5;
+    --radius-md: 12px;
+    --shadow-subtle: 0 4px 15px rgba(0, 0, 0, 0.03);
+    --shadow-hover: 0 8px 25px rgba(168, 32, 26, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.6;
+}
+
+.zh-text {
+    font-family: 'Noto Serif SC', serif;
+}
+
+/* ===== NAVBAR STYLING ===== */
+.top-accent-bar {
+    height: 4px;
+    background: linear-gradient(90deg, var(--china-red) 0%, var(--china-gold) 100%);
+}
+
+header {
+    background-color: var(--bg-surface);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+}
+
+.logo-seal {
+    width: 32px;
+    height: 32px;
+    background-color: var(--china-red);
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.logo-text {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.logo-text span {
+    color: var(--china-red);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.8rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    padding-bottom: 0.2rem;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--china-red);
+    border-bottom: 2px solid var(--china-red);
+}
+
+/* ===== LAYOUT KATALOG CERITA ===== */
+.story-list-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 5rem;
+    width: 100%;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.section-title h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.stamp {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(168, 32, 26, 0.08);
+    color: var(--china-red);
+    border: 1px solid var(--china-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Card Link Cerita */
+.story-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    margin-bottom: 1.2rem;
+}
+
+.story-item {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--china-red);
+    border-radius: var(--radius-md);
+    padding: 1.4rem 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow-subtle);
+    transition: all 0.25s ease;
+}
+
+.story-card-link:hover .story-item {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-3px);
+    border-color: rgba(168, 32, 26, 0.3);
+    border-left-color: var(--china-red);
+}
+
+.story-main-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-main);
+    transition: color 0.2s ease;
+}
+
+.story-card-link:hover .story-main-title {
+    color: var(--china-red);
+}
+
+.story-subtitle {
+    font-size: 0.95rem;
+    color: var(--china-red);
+    font-weight: 600;
+    margin-top: 0.2rem;
+}
+
+.story-status-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.badge-status {
+    background-color: var(--china-gold-light);
+    color: #8A6D1C;
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 0.25rem 0.65rem;
+    border-radius: 20px;
+    border: 1px solid rgba(197, 160, 89, 0.4);
+    letter-spacing: 0.5px;
+}
+
+.arrow-icon {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.story-card-link:hover .arrow-icon {
+    transform: translateX(5px);
+    color: var(--china-red);
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-surface);
+    border-top: 1px solid var(--border-color);
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.footer-seal {
+    width: 22px;
+    height: 22px;
+    background-color: var(--china-red);
+    color: #fff;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+}
+
+/* Responsive Mobile */
+@media (max-width: 600px) {
+    .story-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+    .story-status-box {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
